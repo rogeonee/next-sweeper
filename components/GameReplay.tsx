@@ -46,7 +46,7 @@ export function GameReplay({ levelData, steps = [] }: GameReplayProps) {
     <div>
       <BoardWrapper width={gameState.width} height={gameState.height}>
         {gameState.cells.map((cell) => (
-          <RenderCell cell={cell} />
+          <RenderCell key={cell.id} cell={cell} />
         ))}
       </BoardWrapper>
       {hasSteps && (
