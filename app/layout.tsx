@@ -1,6 +1,8 @@
+import './globals.css';
+
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import './globals.css';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -27,14 +29,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
         <main className="flex flex-col items-center">
           <header className="m-8">
             <hgroup>
-              <h1>Minesweeper Tutorial</h1>
+              <h1>
+                <Link href="/">Minesweeper</Link>
+              </h1>
             </hgroup>
           </header>
+
           <div className="w-96">{children}</div>
         </main>
       </body>

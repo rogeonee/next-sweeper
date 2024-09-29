@@ -1,22 +1,17 @@
 'use client';
 
-import { GamePlay } from '@/components/GamePlay';
-import { useState } from 'react';
+import Link from 'next/link';
 
-export default function Game() {
-  const [key, setKey] = useState(0);
-
+export default function StartScreen() {
   return (
-    <>
-      <GamePlay
-        key={key}
-        settings={{
-          width: 10,
-          height: 10,
-          numMines: 20,
-        }}
-      />
-      <button onClick={() => setKey((prevKey) => prevKey + 1)}>Restart</button>
-    </>
+    <div>
+      <div className="my-8">
+        Play the classic minesweeper game in your browser!
+      </div>
+      <div className="flex flex-col">
+        <Link href="/tutorial/intro">Tutorial</Link>
+        <Link href="/game">Play</Link>
+      </div>
+    </div>
   );
 }
