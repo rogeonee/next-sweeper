@@ -1,9 +1,9 @@
 import './globals.css';
 
-import { Center } from '@/components/Center';
-import Link from 'next/link';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { spaceMono } from './fonts';
+import { Center } from '@/components/layout/Center';
 
 export const metadata: Metadata = {
   title: 'Minesweeper Tutorial',
